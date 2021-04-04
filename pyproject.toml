@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "kapply"
+version = "0.1.0"
+description = "Version control for Kubernetes manifests"
+authors = ["Link Society <contact@link-society.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+click = "^7.1.2"
+PyYAML = "^5.4.1"
+requests = "^2.25.1"
+
+[tool.poetry.dev-dependencies]
+pyinstaller = "^4.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
