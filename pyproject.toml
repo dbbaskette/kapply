@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "kapply"
-version = "0.1.1"
+version = "0.1.2"
 description = "Version control for Kubernetes manifests"
 authors = ["Link Society <contact@link-society.com>"]
 license = "MIT"
