@@ -24,9 +24,12 @@ def load_previous_signature(release):
 
 def is_same_resource(item):
     def filter_func(other):
+        item_meta = item['metadata']
+        other_meta = other['metadata']
+
         return all([
-            item['metadata']['name'] == other['metadata']['name'],
-            item['metadata']['namespace'] == other['metadata']['namespace']
+            item_meta['name'] == other_meta['name'],
+            item_meta.get('namespace') == other_meta.get('namespace')
         ])
 
     return filter_func
