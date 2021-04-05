@@ -75,8 +75,7 @@ def apply_resource(resource):
 
 def apply_resources(resources):
     for resource in resources:
-        if resource:
-            apply_resource(resource)
+        apply_resource(resource)
 
 
 def delete_resource(resource):
@@ -107,5 +106,4 @@ def delete_resource(resource):
 
 def delete_resources(resources):
     for resource in resources:
-        if resource:
-            delete_resource(resource)
+        delete_resource(resource)

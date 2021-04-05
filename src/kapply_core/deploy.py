@@ -72,6 +72,16 @@ def deploy_release(release_name, release_namespace, resources):
         previous_signature
     )
     previous_resources = load_resources(previous_revision)
+
+    resources = filter(
+        lambda rsrc: rsrc is not None,
+        resources
+    )
+    previous_resources = filter(
+        lambda rsrc: rsrc is not None,
+        previous_resources
+    )
+
     deleted_resources = get_deleted_resources(previous_resources, resources)
     apply_resources(resources)
     delete_resources(deleted_resources)
